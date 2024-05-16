@@ -27,4 +27,10 @@ public class NotebookService {
         Notebook notebook = getNotebook(id);
         notebookRepository.delete(notebook);
     }
+
+    public void update(Long id, String name) {
+        Notebook notebook = getNotebook(id);
+        notebook.setName(name);
+        notebookRepository.save(notebook);
+    }
 }
